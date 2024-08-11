@@ -1,0 +1,27 @@
+/* 版面除錯用 */
+* {
+	// outline: 1px dotted green;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+.header-title {
+	font-size: 48px;
+    font-weight: bold;
+	margin-bottom: 32px;
+
+	// mw-990  (寬度<= 990)
+	@include media-breakpoint-down(lg) {}
+
+	// max-w:768 (寬度<= 768)
+	@include media-breakpoint-down(md) {
+		font-size: 48px;
+	}
+
+	// max-w:768 (寬度<= 576)
+	@include media-breakpoint-down(sm) {
+		font-size: 24px;
+	}
+}
