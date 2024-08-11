@@ -4,57 +4,365 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-    <script type="module" crossorigin src="/training-2024week5/assets/main-6bcc73f8.js"></script>
-    <link rel="stylesheet" href="/training-2024week5/assets/main-38cafe05.css">
+    <title>Admin - W5-dashboard-ver2</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js" ></script>
+    <script type="module" crossorigin src="/training-2024week5/assets/main-09b48780.js"></script>
+    <link rel="stylesheet" href="/training-2024week5/assets/main-394cee71.css">
   </head>
   <body>
-    <h1 class="header">我是 header</h1>
-<a href="index.html">index</a>
-<a href="about.html">about</a>
-<a href="contact.html">contact</a>
-    <h1 class="index-title">我是首頁</h1>
+        
+    <!--導覽 nav-->
+    <nav class="nav flex-column bg-light">
+      <a class="nav-link link-dar fw-boldk" aria-current="page" href="#"><img src="/training-2024week5/assets/logo-ANSWER-5336fb45.svg"/></a>
+      <a class="nav-link link-dark fw-bold" href="#"><span class="material-icons me-3">assessment</span>Dashboard</a>
+      <a class="nav-link link-dark fw-bold" href="#"><span class="material-icons me-3">question_answer</span>Question</a>
+      <a class="nav-link link-dark fw-bold" href="./assignment.html"><span class="material-icons me-3">assignment</span>Assignment</a>
+      <a class="nav-link link-dark fw-bold" href="#"><span class="material-icons me-3">video_library</span>Course</a>
+      <a class="nav-link link-success fw-bold" href="./index.html"><span class="material-icons me-3">supervisor_account</span>Admin</a>
+      <a class="nav-link link-dark fw-bold" href="#"><span class="material-icons me-3">settings</span>Setting</a>
+  </nav>
 
-    <div class="card" style="width: 18rem">
-      <img src="/training-2024week5/assets/cat-0c0689ae.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
+    <!-- 主畫面 -->
+    <main class="main">
+      <div class="container" style="padding-left:32px;padding-top:32px;padding-right:32px;">
+        <div class="row">
+          <div class="d-flex p-2 bd-highlight justify-content-between">
+            <div class="d-flex align-items-center">
+              <span class="fs-4 pe-5">Admin</span>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#AddModal" class="d-flex align-items-center text-decoration-none link-dark fs-6">
+                <span class="material-icons link-success fs-6">add</span>
+                <span>
+                  Add New Admin
+                </span>
+              </a>
+            </div>
+            <div>
+              <a href="#" class="text-decoration-none link-dark me-4"><span class="material-icons">search</span>
+              <a href="#" class="text-decoration-none link-dark"><span class="material-icons">notifications_active</span></a>
+            </div>
+            <!-- Button trigger modal -->
+          </div>
+
+          <div class="col-12 col-md-12">
+            <table class="table table-hover" style="margin-bottom:60px;">
+              <thead>
+                <tr>
+                  <th scope="col">ID <span class="material-icons text-success fs-6">arrow_downward</span></th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Verified</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="">
+                  <th scope="row">#1</th>
+                  <td>Emir Wicks</td>
+                  <td>emir.wicks@mail.com</td>
+                  <td>Yes</td>
+                  <td>
+                    <a class="text-decoration-none link-dark  me-4" href="#" data-bs-toggle="modal" data-bs-target="#ViewModal" alt="view" title="view"><span class="material-icons">visibility</span></a>
+                    <a class="text-decoration-none link-dark" href="#" data-bs-toggle="modal" data-bs-target="#EditModal" alt="edit" title="edit"><span class="material-icons">edit</span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#2</th>
+                  <td>Zaina Goldsmith</td>
+                  <td>zaina.goldsmith@mail.com</td>
+                  <td>Yes</td>
+                  <td>
+                    <a class="text-decoration-none link-dark  me-4" href="#" data-bs-toggle="modal" data-bs-target="#ViewModal" alt="view" title="view"><span class="material-icons">visibility</span></a>
+                    <a class="text-decoration-none link-dark" href="#" data-bs-toggle="modal" data-bs-target="#EditModal" alt="edit" title="edit"><span class="material-icons">edit</span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#3</th>
+                  <td>Mahima Lopez</td>
+                  <td>mahima.lopez@mail.com</td>
+                  <td>Yes</td>
+                  <td>
+                    <a class="text-decoration-none link-dark  me-4" href="#" data-bs-toggle="modal" data-bs-target="#ViewModal" alt="view" title="view"><span class="material-icons">visibility</span></a>
+                    <a class="text-decoration-none link-dark" href="#" data-bs-toggle="modal" data-bs-target="#EditModal" alt="edit" title="edit"><span class="material-icons">edit</span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#4</th>
+                  <td>Pharrell Murray</td>
+                  <td>Pharrell Murray</td>
+                  <td>Yes</td>
+                  <td>
+                    <a class="text-decoration-none link-dark  me-4" href="#" data-bs-toggle="modal" data-bs-target="#ViewModal" alt="view" title="view"><span class="material-icons">visibility</span></a>
+                    <a class="text-decoration-none link-dark" href="#" data-bs-toggle="modal" data-bs-target="#EditModal" alt="edit" title="edit"><span class="material-icons">edit</span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#5</th>
+                  <td>Annika Mcbride</td>
+                  <td>Annika Mcbride</td>
+                  <td>Yes</td>
+                  <td>
+                    <a class="text-decoration-none link-dark  me-4" href="#" data-bs-toggle="modal" data-bs-target="#ViewModal" alt="view" title="view"><span class="material-icons">visibility</span></a>
+                    <a class="text-decoration-none link-dark" href="#" data-bs-toggle="modal" data-bs-target="#EditModal" alt="edit" title="edit"><span class="material-icons">edit</span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#6</th>
+                  <td>Fatimah Clark</td>
+                  <td>Fatimah Clark</td>
+                  <td>Yes</td>
+                  <td>
+                    <a class="text-decoration-none link-dark  me-4" href="#" data-bs-toggle="modal" data-bs-target="#ViewModal" alt="view" title="view"><span class="material-icons">visibility</span></a>
+                    <a class="text-decoration-none link-dark" href="#" data-bs-toggle="modal" data-bs-target="#EditModal" alt="edit" title="edit"><span class="material-icons">edit</span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#7</th>
+                  <td>Klaudia Rhodes</td>
+                  <td>Klaudia Rhodes</td>
+                  <td>Yes</td>
+                  <td>
+                    <a class="text-decoration-none link-dark  me-4" href="#" data-bs-toggle="modal" data-bs-target="#ViewModal" alt="view" title="view"><span class="material-icons">visibility</span></a>
+                    <a class="text-decoration-none link-dark" href="#" data-bs-toggle="modal" data-bs-target="#EditModal" alt="edit" title="edit"><span class="material-icons">edit</span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#8</th>
+                  <td>Tillie Lucero</td>
+                  <td>Klaudia Rhodes</td>
+                  <td>Yes</td>
+                  <td>
+                    <a class="text-decoration-none link-dark  me-4" href="#" data-bs-toggle="modal" data-bs-target="#ViewModal" alt="view" title="view"><span class="material-icons">visibility</span></a>
+                    <a class="text-decoration-none link-dark" href="#" data-bs-toggle="modal" data-bs-target="#EditModal" alt="edit" title="edit"><span class="material-icons">edit</span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#9</th>
+                  <td>Sabrina Stephenson</td>
+                  <td>Klaudia Rhodes</td>
+                  <td>Yes</td>
+                  <td>
+                    <a class="text-decoration-none link-dark  me-4" href="#" data-bs-toggle="modal" data-bs-target="#ViewModal" alt="view" title="view"><span class="material-icons">visibility</span></a>
+                    <a class="text-decoration-none link-dark" href="#" data-bs-toggle="modal" data-bs-target="#EditModal" alt="edit" title="edit"><span class="material-icons">edit</span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#10</th>
+                  <td>Annie Smith</td>
+                  <td>Klaudia Rhodes</td>
+                  <td>Yes</td>
+                  <td>
+                    <a class="text-decoration-none link-dark  me-4" href="#" data-bs-toggle="modal" data-bs-target="#ViewModal" alt="view" title="view"><span class="material-icons">visibility</span></a>
+                    <a class="text-decoration-none link-dark" href="#" data-bs-toggle="modal" data-bs-target="#AbcModal" alt="edit" title="edit"><span class="material-icons">edit</span></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-end">
+                <li class="page-item disabled"><a class="page-link" href="#"><span class="material-icons link-success fs-6">keyboard_arrow_left</span></a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item disabled"><a class="page-link" href="#"><span class="material-icons link-success fs-6">keyboard_arrow_right</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
 
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
+ <!-- Start of Add-Modal --> 
+ <div class="modal fade" id="AddModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="AddModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
+            <h5 class="modal-title" id="AddModalLabel"><span class="fw-bold">New Admin</span></h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">內容</div>
+          <div class="modal-body">
+            <p class="fw-bold fs-5 mb-3">Account</p>
+            <div class="mb-3">
+              <label for="AddFormControlInputName" class="form-label"><span class="">Name</span></label>
+              <input type="text" class="form-control" id="AddFormControlInputName" placeholder="" >
+            </div>
+            <div class="mb-3">
+              <label for="AddFormControlInputEmail" class="form-label"><span class="">Email</span></label>
+              <input type="email" class="form-control" id="AddFormControlInputEmail" placeholder="">
+            </div>
+            <hr>
+            <p class="fs-5 fw-bold mb-3">Verification</p>
+            <div class="">
+              <p><span class="material-icons fs-6 text-danger">warning</span><span class="fw-bold ms-2">Verified</span></p>
+            </div>
+            <hr>
+            <div class="mb-3 d-grid gap-2">
+              <button type="button" class="btn btn-outline-secondary" disabled><span class="link-success fw-bold">Send Verification Mail</span></button>
+            </div>
+            <hr>
+            <div class="mb-3">
+              <label for="AddFormControlSelectLevel" class="form-label"><span class="fs-4 fw-bold">Access Level</span></label>
+              <select id="AddFormControlSelectLevel" class="form-select" aria-label="Default select Level">
+                <option selected>-Choose access level-</option>
+                <option value="1">Admin</option>
+              </select>
+            </div>
+            <hr>
+            <div class="mb-3">
+              <p class="fs-5 fw-bold mb-3">Custom Access</p>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="AddFormCheckLecture">
+                <label class="form-check-label" for="AddFormCheckLecture">Lecture</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="AddFormCheckCoupon">
+                <label class="form-check-label" for="AddFormCheckCoupon">Coupon</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="AddFormCheckMessage">
+                <label class="form-check-label" for="AddFormCheckMessage">Message</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="AddFormCheckSetting">
+                <label class="form-check-label" for="AddFormCheckSetting">Setting</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="AddFormCheckTaskMenu">
+                <label class="form-check-label" for="AddFormCheckTaskMenu">Task Menu</label>
+              </div>
+            </div>
+          </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
+            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-success">Add</button>
           </div>
         </div>
       </div>
     </div>
+<!-- End of Add-Modal --> 
 
-    <footer class="footer">我是 footer</footer>
+    <!-- Start of View-Modal --> 
+<div class="modal fade" id="ViewModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <!-- <h5 class="modal-title" id="viewModalLabel"></h5> -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="" style="max-width: 480px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="/training-2024week5/assets/emir-3d7a4b39.jpeg" class="" alt="..." style="width:141px;height:141px;object-fit: cover;  ">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                  <p class="fs-6 mb-2">#1</p>
+                  <p class="fs-6">Admin</p>
+                  <p class="fs-4 mb-2">Emir Wicks</p>
+                  <p class="text-secondary">emir.wicks@mail.com</p>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-muted text-secondary">Verified</span>
+                    <a href="#" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                      <span class="material-icons text-success">expand_more</span>
+                    </a>
+                  </div>
+                  <div>
+                    <div class="collapse" id="collapseWidthExample">
+                      <div class="card-body">
+                        <div class="d-flex gap-2 ">
+                          <button type="button" class="btn btn-outline-danger">Deactivate</button>
+                          <button type="button" class="btn btn-success">Edit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- <div class="modal-footer"></div> -->
+    </div>
+  </div>
+</div>
+</div>
+<!-- End of View-Modal --> 
+
+<!-- Start of Edit-Modal --> 
+    <div class="modal fade" id="EditModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="EditModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="EditModalLabel">Edit Admin</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="fw-bold fs-5">Account</p>
+            <div class="mb-3">
+              <label for="EditFormControlInputName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="EditFormControlInputName" placeholder="Emir Wicks" readonly >
+            </div>
+            <div class="mb-3">
+              <label for="EditFormControlInputEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="EditFormControlInputEmail" placeholder="emir.wicks@mail.com" readonly>
+            </div>
+            <hr>
+            <p class="fs-5 fw-bold">Verification</p>
+            <div class="d-flex justify-content-between">
+              <p><span class="material-icons fs-6 text-success">check_circle</span><span class="fw-bold ms-2">Verified</span></p>
+              <p class="text-muted">2020/4/12</p>
+            </div>
+            <div class="mb-3 d-grid gap-2">
+              <button type="button" class="btn btn-outline-secondary" disabled>Send Verification Mail</button>
+            </div>
+            <div class="mb-3">
+              <label for="EditFormControlSelectLevel" class="form-label fs-4 fw-bold">Access Level</label>
+              <select id="EditFormControlSelectLevel" class="form-select" aria-label="Default select Level">
+                <option>-Choose access level-</option>
+                <option value="1" selected="1">Admin</option>
+              </select>
+            </div>
+  
+            <div class="mb-3">
+              <label for="FormControlInput" class="form-label fs-5 fs-bold">Custom Access</label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="EditFormCheckLecture">
+                <label class="form-check-label" for="EditFormCheckLecture">Lecture</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="EditFormCheckCoupon">
+                <label class="form-check-label" for="EditFormCheckCoupon">Coupon</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="EditFormCheckMessage">
+                <label class="form-check-label" for="EditFormCheckMessage">Message</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="EditFormCheckSetting">
+                <label class="form-check-label" for="EditFormCheckSetting">Setting</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="EditFormCheckTaskMenu">
+                <label class="form-check-label" for="EditFormCheckTaskMenu">Task Menu</label>
+              </div>
+            </div>
+            <div class="mb-3 d-grid gap-2">
+              <p class="fw-bold fs-5">Deactivate Account</p>
+              <p><span class="material-icons fs-5 text-danger">warning</span><span class="text-danger fs-6 ms-2">This cannot be undone!</span></p>
+              <button type="button" class="btn btn-outline-danger">Deactivate This Account</button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-success">Update</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <!-- End of Edit-Modal --> 
+
+    
     
   </body>
 </html>

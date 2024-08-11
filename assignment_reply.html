@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment - W5-dashboard-ver2</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js" ></script>
+    <script type="module" crossorigin src="/training-2024week5/assets/main-09b48780.js"></script>
+    <link rel="stylesheet" href="/training-2024week5/assets/main-394cee71.css">
+  </head>
+  <body>
+        
+    <!--導覽 nav-->
+    <nav class="nav flex-column bg-light">
+      <a class="nav-link link-dark fw-bold" aria-current="page" href="#"><img src="/training-2024week5/assets/logo-ANSWER-5336fb45.svg"/></a>
+      <a class="nav-link link-dark fw-bold" href="#"><span class="material-icons me-3">assessment</span>Dashboard</a>
+      <a class="nav-link link-dark fw-bold" href="#"><span class="material-icons me-3">question_answer</span>Question</a>
+      <a class="nav-link link-success fw-bold" href="./assignment.html"><span class="material-icons me-3">assignment</span>Assignment</a>
+      <a class="nav-link link-dark fw-bold" href="#"><span class="material-icons me-3">video_library</span>Course</a>
+      <a class="nav-link link-dark fw-bold" href="./index.html"><span class="material-icons me-3">supervisor_account</span>Admin</a>
+      <a class="nav-link link-dark fw-bold" href="#"><span class="material-icons me-3">settings</span>Setting</a>
+  </nav>
+
+    <!-- 主畫面 -->
+    <main class="main">
+      <div class="container" style="padding-left:32px;padding-top:32px;padding-right:32px;">
+        <div class="row">
+
+          <div class="d-flex p-2 bd-highlight justify-content-between">
+            <div class="d-flex align-items-center">
+              <span class="fs-4 pe-5">Assignment</span>
+             
+              <!-- Start of Example single danger button -->
+              <div class="btn-group">
+                <a href="#" class="dropdown-toggle text-decoration-none fs-6 fw-bold text-dark" data-bs-toggle="dropdown" aria-expanded="false">All Courses</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <!-- End of Example single danger button -->
+            </div>
+            <div>
+              <a href="#" class="text-decoration-none link-dark me-4"><span class="material-icons">search</span>
+              <a href="#" class="text-decoration-none link-dark"><span class="material-icons">notifications_active</span></a>
+            </div>
+          </div>
+
+          <div class="d-flex">
+            <span class="fw-bold text-black">All(4)</span>
+            <span class="material-icons text-success">expand_more</span>
+          </div>
+              <div class="d-flex gap-2 ">
+                <div class="col-12 col-md-4">
+                  <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-page01-list" data-bs-toggle="list" href="#list-page01" role="tab" aria-controls="list-home"> 
+                      <div class="d-flex w-100 justify-content-between">
+                        <span class="fs-7">Chapter Assignment 2</span>
+                        <small class="fs-7 text-secondary">4 hrs ago</small>
+                      </div>
+                      <div class="d-flex w-100 justify-content-between">
+                        <span class="fs-6 fw-bold">Please check this file…</span>
+                        <small class="fs-7 text-secondary">Emily Wang</small>
+                      </div>
+                    </a>
+      
+                    <a class="list-group-item list-group-item-action" id="list-page02-list" data-bs-toggle="list" href="#list-page02" role="tab" aria-controls="list-profile">
+                      <div class="d-flex w-100 justify-content-between">
+                        <span class="fs-7">Chapter Assignment 1</span>
+                        <small class="fs-7 text-secondary">12 hrs ago</small>
+                      </div>
+                      <div class="d-flex w-100 justify-content-between">
+                        <span class="fs-6 fw-bold">My Homework</span>
+                        <small class="fs-7 text-secondary">David Xu</small>
+                      </div>
+                    </a>
+      
+                    <a class="list-group-item list-group-item-action" id="list-page03-list" data-bs-toggle="list" href="#list-page03" role="tab" aria-controls="list-messages">
+                      <div class="d-flex w-100 justify-content-between">
+                        <span class="fs-7">Final Assignment</span>
+                        <small class="fs-7 text-secondary">18 hrs ago</small>
+                      </div>
+                      <div class="d-flex w-100 justify-content-between">
+                        <span class="fs-6 fw-bold">Have a problem with this…</span>
+                        <small class="fs-7 text-secondary">Tony Wei</small>
+                      </div>
+                    </a>
+      
+                    <a class="list-group-item list-group-item-action" id="list-page04-list" data-bs-toggle="list" href="#list-page04" role="tab" aria-controls="list-settings">
+                      <div class="d-flex w-100 justify-content-between">
+                        <span class="fs-7">Final Assignment</span>
+                        <small class="fs-7 text-secondary">19 hrs ago</small>
+                      </div>
+                      <div class="d-flex w-100 justify-content-between">
+                        <span class="fs-6 fw-bold">Did I do it right?</span>
+                        <small class="fs-7 text-secondary">Christina Lin</small>
+                      </div>
+                    </a>
+                  </div> 
+                </div>
+
+                <div class="col-12 col-md-8">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-page01" role="tabpanel" aria-labelledby="list-page01-list">
+                      <div class="card mb-3">
+                        <div class="card-header">
+                          <div>
+                            <h6 class="fs-7">Chapter Assignment 2 / HTML&CSS</h6>
+                            <span class="fs-6 fw-bold">Please check this file for me, thanks!</span>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0">
+                              <img src="/training-2024week5/assets/emilywang-cc5a821b.jpeg" class="rounded-circle" alt="..." style="width:40px;height:40px;">
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                              <div class="mb-3">
+                                <h6 class="fw-bold fs-6">Emily Wang</h6>
+                                <small class="text-muted text-secondary">10:38 AM (4 hours ago)</small>
+                              </div>
+                              <p> Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the <code class="text-success bg-light px-1 rounded-1 font-mono">div</code> is bigger than the height of the <code class="text-success bg-light px-1 rounded-1 font-mono">img</code> ? There is a gap below the image, but it doesn’t seems to be a padding/margin. What is the gap or extra space below image?</p>
+                              <a href="#" class="btn btn-light border" download="HW-2-David.zip">HW-2-David.zip</a>
+                              <hr>
+                            </div>
+                          </div>
+                          <div id="editor" class="editor">This is some sample content.</div>
+                          <div class="d-flex justify-content-end mt-2">
+                            <a href="./assignment.html" class="btn btn-outline-success me-3">Cancel</a>
+                            <button type="button" class="btn btn-success">Reply</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="list-page02" role="tabpanel" aria-labelledby="list-page02-list">
+                      02..
+                    </div>
+                    <div class="tab-pane fade" id="list-page03" role="tabpanel" aria-labelledby="list-page03-list">
+                      03..
+                    </div>
+                    <div class="tab-pane fade" id="list-page04" role="tabpanel" aria-labelledby="list-page04-list">
+                      04..
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </main>
+<script>
+   ClassicEditor
+      .create( document.querySelector( '#editor' ) )
+     .then( editor => {
+        console.log( editor );
+       } )
+      .catch( error => {
+        console.error( error );
+      } );
+  </script>
+
+    
+    
+  </body>
+</html>
