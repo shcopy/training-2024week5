@@ -510,9 +510,6 @@ $box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
 $component-active-color:      $white !default;
 $component-active-bg:         $primary !default;
 
-
-
-
 // scss-docs-start caret-variables
 $caret-width:                 .3em !default;
 $caret-vertical-align:        $caret-width * .85 !default;
@@ -543,10 +540,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-// $font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-sans-serif:      Lato, Arial, sans-serif !default;  // *custom
-
-
+$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
@@ -721,13 +715,8 @@ $table-variants: (
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 // scss-docs-start input-btn-variables
-// $input-btn-padding-y:         .375rem !default;
-$input-btn-padding-y:         1rem !default; // custom
-
-// $input-btn-padding-x:         .75rem !default;
-$input-btn-padding-x:         1rem !default; // custom
-
-
+$input-btn-padding-y:         .375rem !default;
+$input-btn-padding-x:         .75rem !default;
 $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
@@ -835,16 +824,12 @@ $input-padding-y-lg:                    $input-btn-padding-y-lg !default;
 $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
-// $input-bg:                           $body-bg !default;
-$input-bg:                              $gray-100 !default; // custom
-
+$input-bg:                              $body-bg !default;
 $input-disabled-color:                  null !default;
 $input-disabled-bg:                     $gray-200 !default;
 $input-disabled-border-color:           null !default;
 
-// $input-color:                           $body-color !default;
-$input-color:                           $gray-900 !default; // custom
-
+$input-color:                           $body-color !default;
 $input-border-color:                    $gray-400 !default;
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      $box-shadow-inset !default;
@@ -947,9 +932,7 @@ $form-select-indicator-padding:     $form-select-padding-x * 3 !default; // Extr
 $form-select-font-weight:           $input-font-weight !default;
 $form-select-line-height:           $input-line-height !default;
 $form-select-color:                 $input-color !default;
-// $form-select-bg:                    $input-bg !default;
-$form-select-bg:                    $white !default; // custom
-
+$form-select-bg:                    $input-bg !default;
 $form-select-disabled-color:        null !default;
 $form-select-disabled-bg:           $gray-200 !default;
 $form-select-disabled-border-color: $input-disabled-border-color !default;
@@ -1208,24 +1191,24 @@ $pagination-padding-x-lg:           1.5rem !default;
 
 $pagination-font-size:              $font-size-base !default;
 
-$pagination-color:                  $dark !default; // $link-color !default;
+$pagination-color:                  var(--#{$prefix}link-color) !default;
 $pagination-bg:                     $white !default;
 $pagination-border-radius:          $border-radius !default;
 $pagination-border-width:           $border-width !default;
 $pagination-margin-start:           ($pagination-border-width * -1) !default;
 $pagination-border-color:           $gray-300 !default;
 
-$pagination-focus-color:            $success !default; // $link-hover-color !default;
-$pagination-focus-bg:               $success !default; // $gray-200 !default;
+$pagination-focus-color:            var(--#{$prefix}link-hover-color) !default;
+$pagination-focus-bg:               $gray-200 !default;
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 $pagination-focus-outline:          0 !default;
 
-$pagination-hover-color:            $white !default; // $link-hover-color !default;
-$pagination-hover-bg:               $success !default; // $gray-200 !default;
-$pagination-hover-border-color:     $success !default; // $gray-300 !default;
+$pagination-hover-color:            var(--#{$prefix}link-hover-color) !default;
+$pagination-hover-bg:               $gray-200 !default;
+$pagination-hover-border-color:     $gray-300 !default;
 
-$pagination-active-color:           $white !default; // $component-active-color !default;
-$pagination-active-bg:              $success !default; // $component-active-bg !default;
+$pagination-active-color:           $component-active-color !default;
+$pagination-active-bg:              $component-active-bg !default;
 $pagination-active-border-color:    $pagination-active-bg !default;
 
 $pagination-disabled-color:         $gray-600 !default;
@@ -1426,9 +1409,7 @@ $modal-backdrop-bg:                 $black !default;
 $modal-backdrop-opacity:            .5 !default;
 
 $modal-header-border-color:         var(--#{$prefix}border-color) !default;
-// $modal-header-border-width:         $modal-content-border-width !default;
-$modal-header-border-width:         0 !default; // custom
-
+$modal-header-border-width:         $modal-content-border-width !default;
 $modal-header-padding-y:            $modal-inner-padding !default;
 $modal-header-padding-x:            $modal-inner-padding !default;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
@@ -1497,15 +1478,9 @@ $list-group-item-bg-scale:          -80% !default;
 $list-group-item-color-scale:       40% !default;
 
 $list-group-hover-bg:               $gray-100 !default;
-// $list-group-active-color:           $component-active-color !default;
-$list-group-active-color:           $black !default; // custom
-
-// $list-group-active-bg:              $component-active-bg !default;
-$list-group-active-bg:              $gray-100 !default; // custom
-
-// $list-group-active-border-color:    $list-group-active-bg !default;
-$list-group-active-border-color:    rgba($black, .125) !default; // custom
-
+$list-group-active-color:           $component-active-color !default;
+$list-group-active-bg:              $component-active-bg !default;
+$list-group-active-border-color:    $list-group-active-bg !default;
 
 $list-group-disabled-color:         $gray-600 !default;
 $list-group-disabled-bg:            $list-group-bg !default;
